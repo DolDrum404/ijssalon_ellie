@@ -26,9 +26,12 @@ losse_btw = f"{uitvoer * btw:.2f}".replace('.',',')
 #totaal_incl_btw = f"{uitvoer * (1 + btw):.2f}".replace('.',',')
 
 def laag_hoog(mijn_lijst):
+    uitvoer =[]
     laagste = min(mijn_lijst)
     hoogste = max(mijn_lijst)
-    return laagste, hoogste
+    uitvoer.append(laagste)
+    uitvoer.append(hoogste)
+    return uitvoer
 
 laagste_bedrag, hoogste_bedrag = laag_hoog(week_inkomsten)
 
